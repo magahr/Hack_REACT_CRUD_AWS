@@ -42,7 +42,7 @@
     ES7+ React/Redux/React-Native snippets
 
 4.- A los componentes cambiarle la extension a .jsx, dajando al index con .js
-    (Esto facilita la creacion de las etiquetas HTML)
+    (Esto facilita la creacnpion de las etiquetas HTML)
 
 5.- rutas:
     https://reactrouter.com/en/main
@@ -64,4 +64,5 @@ git commit -m "22-10-2024 I saw the video, Clase 38 all. Now I have to wacht the
 
 git commit -m "23-10-2024 I waching the video Clase 39 1:04"
 git commit -m "24-10-2024 I wached the all video Clase 39, but this have something warning"
+git commit -m "30-10-2024 It is updating in home"
 
