@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from "react";
+import axios from 'axios'
 
 export function User() {
     const [users, serUsers] = useState([]);
@@ -8,7 +9,7 @@ export function User() {
     useEffect( () => {
        const fetchUser = async () => {
             try {
-                    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+                    const response = await axios.get("https://jsonplaceholder.typicode.com/users");
                     if (!response.ok){
                         throw new Error('La respuesta no fue la esperada')
                     }
