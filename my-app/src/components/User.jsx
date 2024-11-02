@@ -10,12 +10,7 @@ export function User() {
        const fetchUser = async () => {
             try {
                     const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-                    if (!response.ok){
-                        throw new Error('La respuesta no fue la esperada')
-                    }
-                    const data = await response.json();
                     serUsers(data);
-
                 } catch (error) {
                         SetError(error.message)
                         console.log("Entro en el catch", error);
