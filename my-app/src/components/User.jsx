@@ -4,6 +4,7 @@ import axios from 'axios'
 
 export function User() {
   const [users, setUsers] = useState([]);
+  const [usersBack, setUsersBack] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -11,8 +12,10 @@ export function User() {
             const fetchUser = async () => {
             try {
                 const response = await axios.get("https://jsonplaceholder.typicode.com/users");   
-
+                const usuarios = await axios.get("http://127.0.0.1:5000/students");   
+                console.log(`Usuarios de mi Backend`, usuarios)
                 setUsers(response.data);
+                setUsersBack(usuarios.data);
             } catch (error) {
                 // Manejo de errores (aquí puedes personalizar los mensajes de error)
                 setError('Ocurrió un error al obtener los datos');
@@ -31,6 +34,9 @@ export function User() {
     <ul>
       {users.map(user => (
         <li key={user.id}>{user.name} - {user.email}</li>
+      ))}
+      {usersBack.map(user => (
+        <li key={user.id}>{user.name} - {user.major} - {user.age}</li>
       ))}
     </ul>
   );
