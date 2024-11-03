@@ -76,5 +76,5 @@ git commit -m "24-10-2024 I wached the all video Clase 39, but this have somethi
 git commit -m "30-10-2024 It is updating in home"
 git commit -m "30-10-2024 Installing AXION"
 git commit -m "03-11-2024 Creation other Home, Routes y other companents. I creating form too, with bootstrap"
-git commit -m "03-11-2024. I creating the form a testing and everything is OKEY"
+git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing and everything is OKEY"
 
