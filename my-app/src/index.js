@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {App} from './App';
-import { Saludo } from './components/Saludo';
+import Home from './components/Home';
+
+//import {App} from './App';
+//import { Saludo } from './components/Saludo';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <h1>Hola estoy en la pagina index.js. Esto es despues de llamar al componente App </h1>
-    <Saludo />
-    <h1>Hola estoy en la pagina index.js. Esto es despues de llamar al componente SALUDOS </h1>
+    <Home/>
+   { /*</*App >*/}
+   {              }
   </React.StrictMode>
 );
 

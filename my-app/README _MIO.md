@@ -73,4 +73,5 @@ git commit -m "23-10-2024 I waching the video Clase 39 1:04"
 git commit -m "24-10-2024 I wached the all video Clase 39, but this have something warning"
 git commit -m "30-10-2024 It is updating in home"
 git commit -m "30-10-2024 Installing AXION"
+git commit -m "03-11-2024 Creation other Home, Routes y other companents. I creating form too, with bootstrap"
 

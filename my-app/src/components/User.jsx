@@ -1,28 +1,95 @@
-import React, {useEffect, useState} from "react";
+// esto es de gemini
+import React, { useEffect, useState } from "react";
 import axios from 'axios'
 
 export function User() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+    useEffect(() => {
+            const fetchUser = async () => {
+            try {
+                const response = await axios.get("https://jsonplaceholder.typicode.com/users");   
+
+                setUsers(response.data);
+            } catch (error) {
+                // Manejo de errores (aquí puedes personalizar los mensajes de error)
+                setError('Ocurrió un error al obtener los datos');
+            } finally {
+                setLoading(false);
+            }
+            };
+
+            fetchUser();
+        }, []); // Arreglo de dependencias vacío: se ejecuta una vez
+
+  if (loading) return <div>Cargando...</div>
+  if (error) return <div>Error: {error}</div>
+
+  return (
+    <ul>
+      {users.map(user => (
+        <li key={user.id}>{user.name} - {user.email}</li>
+      ))}
+    </ul>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* desde aqui
+import React, {useEffect, useState} from "react";
+import axios from 'axios'
+
+
+export function User() {
     const [users, serUsers] = useState([]);
-    const {loading, setloading} = useState(true);
-    const {error, SetError} = useState(null);
+    const {loading, setLoading} = useState(false);
+    const {error, setError} = useState(null);
 
     useEffect( () => {
        const fetchUser = async () => {
             try {
                     const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-                    serUsers(data);
+                    serUsers(response.data);
                 } catch (error) {
-                        SetError(error.message)
-                        console.log("Entro en el catch", error);
+                    if (error.response){
+                        if (error.response.status === 404) {
+                            setError('El servidor no pudo encontrar el contenido solicitado')
+                        } else {
+                            setError('Error en la respuesta del servidor')
+                        }
+                    }else if (error.request) {
+                        setError('No se recibio respuesta del servidor')
+                    }else{
+                        setError('Error: ' + error.message)
                     }
-                finally {
-                        setloading(false);
+              } finally {
+                        setLoading(false);
                     }
-                }
+            }
             fetchUser();
     //}, [] ); aqui hay un warning que no se que es.... todo esto fue hecho con el vido 39
-    }, []);
-    
+    },[setError, setLoading]);
+     hasta aqui */
+/*, [] video 39 minuto 46:31*/
+
+/*desde aqui 
+
     if (loading) return <div>Cargando...</div>
     if (error) return <div>Error: {error}</div>
     return (
@@ -36,3 +103,4 @@ export function User() {
     );
   }
 
+hasta aqui */
