@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Home from './components/Home';
+import App2 from './components/App2';
 
 //import {App} from './App';
 //import { Saludo } from './components/Saludo';
@@ -9,7 +9,7 @@ import Home from './components/Home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+    <App2/>
    { /*</*App >*/}
    {              }
   </React.StrictMode>
