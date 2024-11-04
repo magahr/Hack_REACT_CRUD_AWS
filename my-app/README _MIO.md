@@ -40,6 +40,10 @@
 
        npm install react-router-dom
 
+5.- Instalar formik yup axios
+    npm install formik yup axios
+
+
 2.- Inicar el servidor
     npm run start
 
@@ -78,4 +82,4 @@ git commit -m "30-10-2024 Installing AXION"
 git commit -m "03-11-2024 Creation other Home, Routes y other companents. I creating form too, with bootstrap"
 git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing and everything is OKEY"
 git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing with BD IN FLASK and everything is OKEY"
-
+git commit -m "03-11-2024. I wached the all 41 video and I creating the form a testing with BD IN FLASK and everything is OKEY, i updating the form"
