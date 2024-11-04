@@ -4,7 +4,7 @@ const Form = () => {
     const [formData, setFormData] = useState({
         email: "",
         password: "",
-    })5u
+    })
     const handleChange = (e) => {
         //destructuracion de objetos
         const {name, value} = e.target
@@ -20,9 +20,9 @@ const Form = () => {
         e.preventDefault();
         console.log('Los valores del formulario son:', formData)
     };
-    return (
+//     return (
         
-    );
-}
+//     );
+// }
 
 export default Form;
