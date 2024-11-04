@@ -26,16 +26,23 @@ const StudentForm = ({student, onSubmit}) => {
                     <Field name="name" type="text"></Field>
                     <ErrorMessage name='name' component = "div"></ErrorMessage>
                 </div>
+                <div>
+                    <label htmlFor='age'>Edad</label>
+                    <Field name="age" type="number"></Field>
+                    <ErrorMessage name='age' component = "div"></ErrorMessage>
+                </div>
+                <div>
+                    <label htmlFor='major'>Edad</label>
+                    <Field name="major" type="text"></Field>
+                    <ErrorMessage name='major' component = "div"></ErrorMessage>
+                </div>
                 <button type='submit' disabled={isSubmitting}>
                     {student ? 'Actualizar Estudiante': 'Crear Estudiante'}
                 </button>
-
             </Form>
         )}
       </Formik>   
     )
-
- 
 }
 
 export default StudentForm;
