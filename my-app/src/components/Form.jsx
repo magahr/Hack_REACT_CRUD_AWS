@@ -21,11 +21,32 @@ const Form = () => {
     const handleSubmit = (values) => {
         //esta es la ruta que esta en el endpoint en el flask
         if (student) {
-            axios.patch(`http://127.0.0.1:5000//patch-student/${studentId}`, values) 
-
+            axios.patch(`http://127.0.0.1:5000/patch-student/${studentId}`, values) 
+            .then(() => {
+                alert('Estudiante actualizado correctamente');
+                navigate('/home')
+            })
+            .catch(error => console.error('Error al actualizar al estudiante  ') )
         }
+        else{
+            axios.post(`http://127.0.0.1:5000/create-student`, values)
+            .then(() => {
+                alert('Estudiante creado correctamente');
+                navigate('/home')
+            })
+            .catch(error => console.error('Error al crear al estudiante  ', error) )
+        }
+
         
     }
+    return (
+       <div>
+            <h1>
+              { student ? 'Actualizar Estudiante ' : ' Crear Estudiante'}
+            </h1>
+            <StudentForm student={student} onSubmit={handleSubmit} />
+       </div>
+    )
 }
 
 export default Form;

@@ -26,6 +26,7 @@ const App2 = () => {
             <Routes>
                 <Route path='/home' element={<Home />} />        *// Ruta por defecto, muestra Home
                 <Route path='/form' element={<Form />} />    *// Ruta para el formulario
+                <Route path='/form/:studentId' element={<Form/>} />    *// Ruta para el formulario
             </Routes> 
        </Router>
     )

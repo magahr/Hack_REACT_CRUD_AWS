@@ -84,3 +84,4 @@ git commit -m "03-11-2024. I wached the all 40 video and I creating the form a t
 git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing with BD IN FLASK and everything is OKEY"
 git commit -m "03-11-2024. Iwaching the 42 video, i updating the form"
 git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 min."
+git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 min."
