@@ -88,4 +88,4 @@ git commit -m "03-11-2024. Iwaching the 42 video, i updating the form"
 git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 min."
 git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 
 git commit -m "05-11-2024 Updating proyect in fospuca"
-git commit -m "05-11-2024 Updating proyect in fospuca. I create and tested Update and Creating button. I have to control the size of the field."
+git commit -m "05-11-2024 Updating proyect in fospuca. I create and tested Update and Creating and delete button. I have to control the size of the field."
