@@ -28,6 +28,22 @@ export function User() {
             fetchUser();
         }, []); // Arreglo de dependencias vacío: se ejecuta una vez
 
+        const handleDelete = async (user) => {
+            if (window.confirm('Quieres borrar este usuario')) {
+                try {
+                    axios.delete(`http://127.0.0.1:5000/delete-student/?name=${user.name}`)
+                    setUsersBack(usersBack.filter(u => u.id !== user.id))
+                } catch (error) {
+                    console.error ('Error al eliminar el estudiante', error);
+                    alert('Error al eliminar el estudiante')
+                }
+
+            }
+
+        }
+
+
+
   if (loading) return <div>Cargando...</div>
   if (error) return <div>Error: {error}</div>
 
@@ -42,6 +58,11 @@ export function User() {
             <Link to={`/form/${user.id}`}>
             <button>Editar</button>
             </Link>
+            <button onClick={() =>  handleDelete(user)}>Eliminar</button>
+
+
+
+
         </li>
       ))}
     </ul>
