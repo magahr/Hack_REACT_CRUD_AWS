@@ -5,12 +5,13 @@ import * as Yup from 'yup';
 const FormSchema = Yup.object().shape({
   name: Yup.string().required('Nombre es requerido'),
   age: Yup.number().required('Edad es requerida').positive().integer(),
-  major: Yup.string().required('Profesion es requerida'),
-});
+  major: Yup.string().required('Profesion es requerida')
+})
 
 const StudentForm = ({ student, onSubmit }) => {
   return (
     <Formik
+      isSubmitting = {true}
       initialValues={{
         name: student ? student.name : '',
         age: student ? student.edad : '',

@@ -1,9 +1,10 @@
 // esto es de gemini
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
+import { Link } from 'react-router-dom';
 
 export function User() {
-  const [users, setUsers] = useState([]);
+  //const [users, setUsers] = useState([]);
   const [usersBack, setUsersBack] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -11,10 +12,10 @@ export function User() {
     useEffect(() => {
             const fetchUser = async () => {
             try {
-                const response = await axios.get("https://jsonplaceholder.typicode.com/users");   
+                //const response = await axios.get("https://jsonplaceholder.typicode.com/users");   
                 const usuarios = await axios.get("http://127.0.0.1:5000/students");   
                 console.log(`Usuarios de mi Backend`, usuarios)
-                setUsers(response.data);
+                //setUsers(response.data);
                 setUsersBack(usuarios.data);
             } catch (error) {
                 // Manejo de errores (aquí puedes personalizar los mensajes de error)
@@ -32,11 +33,16 @@ export function User() {
 
   return (
     <ul>
-      {users.map(user => (
+       {/*users.map(user => (
         <li key={user.id}>{user.name} - {user.email}</li>
-      ))}
+      ))*/}
       {usersBack.map(user => (
-        <li key={user.id}>{user.name} - {user.major} - {user.age}</li>
+        <li key={user.id}>
+            {user.name} - {user.major} - {user.age}
+            <Link to={`/form/${user.id}`}>
+            <button>Editar</button>
+            </Link>
+        </li>
       ))}
     </ul>
   );
