@@ -1,7 +1,9 @@
 # Rutas_de_Desarrollo
 
   Rutas en en trabajo:
-     \my-app
+
+     Repo:
+     C:\Users\mhernandez.FOSPUCA\Documents\cursos\Ciclo08\Practica\hack\React\Hack_REACT_CRUD_AWS\my-app
 
           
   Rutas en Casa:
@@ -74,3 +76,4 @@ estensiones:
 Control de cambio:
 
 git commit -m "17-11-2024 Creating the new project"
+git commit -m "18-11-2024 Updating the path in my Job"
