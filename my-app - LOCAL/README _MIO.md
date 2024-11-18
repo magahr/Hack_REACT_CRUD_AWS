@@ -73,4 +73,19 @@ estensiones:
 
 Control de cambio:
 
-git commit -m "17-11-2024 Creating the new project"
+git commit -m "21-10-2024 I saw the video until 0:22:14"
+git commit -m "22-10-2024 I saw the video, Clase 38, until 0:26:50"
+git commit -m "22-10-2024 I saw the video, Clase 38 all. Now I have to wacht the 39 video"
+
+git commit -m "23-10-2024 I waching the video Clase 39 1:04"
+git commit -m "24-10-2024 I wached the all video Clase 39, but this have something warning"
+git commit -m "30-10-2024 It is updating in home"
+git commit -m "30-10-2024 Installing AXION"
+git commit -m "03-11-2024 Creation other Home, Routes y other companents. I creating form too, with bootstrap"
+git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing and everything is OKEY"
+git commit -m "03-11-2024. I wached the all 40 video and I creating the form a testing with BD IN FLASK and everything is OKEY"
+git commit -m "03-11-2024. Iwaching the 42 video, i updating the form"
+git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 min."
+git commit -m "04-11-2024. Iwaching the 42 video, i updating the form. I going by 0:48 
+git commit -m "05-11-2024 Updating proyect in fospuca"
+git commit -m "05-11-2024 Updating proyect in fospuca. I create and tested Update and Creating and delete button. I have to control the size of the field."
