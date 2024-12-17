@@ -1,7 +1,9 @@
 # Rutas_de_Desarrollo
 
   Rutas en en trabajo:
-     \my-app
+
+     Repo:
+     C:\Users\mhernandez.FOSPUCA\Documents\cursos\Ciclo08\Practica\hack\React\Hack_REACT_CRUD_AWS\my-app
 
           
   Rutas en Casa:
