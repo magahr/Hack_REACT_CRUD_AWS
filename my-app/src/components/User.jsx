@@ -13,7 +13,7 @@ export function User() {
             const fetchUser = async () => {
             try {
                 //const response = await axios.get("https://jsonplaceholder.typicode.com/users");   
-                const usuarios = await axios.get("http://127.0.0.1:5000/formularios");   
+                const usuarios = await axios.get("http://18.222.0.186:5000/formularios");   
                 console.log(`Usuarios de mi Backend`, usuarios)
                 //setUsers(response.data);
                 setUsersBack(usuarios.data);
@@ -31,7 +31,7 @@ export function User() {
         const handleDelete = async (user) => {
           if (window.confirm('¿Quieres eliminar este usuario?')) {
               try {
-                  const response = await axios.delete(`http://127.0.0.1:5000/delete-formulario/${user.id}`);
+                  const response = await axios.delete(`http://18.222.0.186:5000/delete-formulario/${user.id}`);
                   if (response.status === 200) {
                       setUsersBack(usersBack.filter(u => u.id !== user.id));
                       // Mostrar notificación de éxito
@@ -70,9 +70,9 @@ export function User() {
 }
 
 /*
-http://127.0.0.1:5000/delete-formulario/4
+http://18.222.0.186:5000/delete-formulario/4
 
-const response = await axios.delete(`http://127.0.0.1:5000/delete-formulario/?id=${user.id}`);
+const response = await axios.delete(`http://18.222.0.186:5000/delete-formulario/?id=${user.id}`);
 
  <button onClick={() =>  handleDelete(user)}>Eliminar</button>
  return (
