@@ -13,7 +13,7 @@ const Form = () => {
     useEffect ( () => {
         if (formularioId) {
             // obtener ese usuario por su id si existe
-            axios.get(`http://127.0.0.1:5000/formularios/${formularioId}`)
+            axios.get(`http://18.222.0.186:5000/formularios/${formularioId}`)
             .then(response => setFormulario(response.data))
             .catch(error => console.error('Error al obtener usuario', error))
         }
@@ -21,7 +21,7 @@ const Form = () => {
     const handleSubmit = (values) => {
         //esta es la ruta que esta en el endpoint en el flask
         if (formulario) {
-            axios.patch(`http://127.0.0.1:5000/patch-formulario/${formularioId}`, values) 
+            axios.patch(`http://18.222.0.186:5000/patch-formulario/${formularioId}`, values) 
             .then(() => {
                 //actualizar el usuario
                 alert('Usuario actualizado correctamente');
@@ -31,7 +31,7 @@ const Form = () => {
         }
         else{
             //crear el usuario
-            axios.post(`http://127.0.0.1:5000/create-formulario`, values)
+            axios.post(`http://18.222.0.186:5000/create-formulario`, values)
             .then(() => {
                 alert('Usuario creado correctamente');
                 navigate('/home')
